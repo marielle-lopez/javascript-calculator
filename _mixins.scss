@@ -1,4 +1,4 @@
-.body {
+@mixin body {
   margin: 0;
   display: flex;
   justify-content: center;
@@ -7,7 +7,7 @@
   background-color: hsl(0, 0%, 95%);
 }
 
-.calculator {
+@mixin calculator {
   font-family: Arial, Helvetica, sans-serif;
   background-color: hsl(0, 0%, 15%);
   border-radius: 15px;
@@ -15,7 +15,7 @@
   overflow: hidden;
 }
 
-.display {
+@mixin display {
   width: 100%;
   padding: 20px;
   font-size: 5rem;
@@ -25,7 +25,7 @@
   color: white;
 }
 
-.button {
+@mixin button {
   width: 100px;
   height: 100px;
   border-radius: 50px;
@@ -35,24 +35,29 @@
   font-size: 3rem;
   font-weight: bold;
   cursor: pointer;
-}
-.button:hover {
-  background-color: hsl(0, 0%, 40%);
-}
-.button:active {
-  background-color: hsl(0, 0%, 50%);
-}
-.button__operator {
-  background-color: hsl(35, 100%, 55%);
-}
-.button__operator:hover {
-  background-color: hsl(35, 100%, 65%);
-}
-.button__operator:active {
-  background-color: hsl(35, 100%, 75%);
+
+  &:hover {
+    background-color: hsl(0, 0%, 40%);
+  }
+
+  &:active {
+    background-color: hsl(0, 0%, 50%);
+  }
+
+  &__operator {
+    background-color: hsl(35, 100%, 55%);
+
+    &:hover {
+      background-color: hsl(35, 100%, 65%);
+    }
+
+    &:active {
+      background-color: hsl(35, 100%, 75%);
+    }
+  }
 }
 
-.keys {
+@mixin keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;

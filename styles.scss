@@ -1,0 +1,21 @@
+@use "./mixins";
+
+.body {
+  @include mixins.body;
+}
+
+.calculator {
+  @include mixins.calculator;
+}
+
+.display {
+  @include mixins.display;
+}
+
+.button {
+  @include mixins.button;
+}
+
+.keys {
+  @include mixins.keys;
+}
